@@ -47,6 +47,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LOc-jh-Lqu">
                                 <rect key="frame" x="84" y="111" width="729" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="handleMoveSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="qLr-0w-3JG"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-hl-4fm">
                                 <rect key="frame" x="839" y="115" width="29" height="21"/>
@@ -110,6 +113,7 @@
                         <outlet property="goal" destination="3Bo-gz-7DQ" id="sfz-7D-y28"/>
                         <outlet property="round" destination="9IT-MI-Tlz" id="BUS-Xn-t0N"/>
                         <outlet property="score" destination="hvS-4g-271" id="q1x-z1-Bzc"/>
+                        <outlet property="slider" destination="LOc-jh-Lqu" id="gLb-tx-jZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

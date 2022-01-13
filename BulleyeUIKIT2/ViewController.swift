@@ -9,30 +9,75 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var slider: UISlider!
-    @IBOutlet var goal: UILabel!
-    @IBOutlet var score: UILabel!
-    @IBOutlet var round: UILabel!
+    var sliderValue = 50
+    var goalValue = 0
+    var scoreValue = 0
+    var roundValue = 0
+    
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var goal: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var round: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        newRound()
+        
     }
     
-    @IBAction func handleSubmit() -> Void {
-        let alert = UIAlertController(title: "some title", message: "some message", preferredStyle: .alert)
+    func updateLabels() {
+        goal.text = String(goalValue)
+        score.text = String(scoreValue)
+        round.text = String(roundValue)
+    }
+    
+    func newRound() {
+        sliderValue = 50
+        goalValue = Int.random(in: 1...100)
+        roundValue += 1
+        slider?.value = Float(sliderValue)
+        updateLabels()
+    }
+    
+    func  countThePrecision() -> Int {
+        return 100 - abs(sliderValue - goalValue)
+    }
+    
+    func countNewScore() {
+        let precision = countThePrecision()
+        
+        switch precision {
+            case 100:
+                scoreValue += 200
+            case 99:
+                scoreValue += 150
+            default:
+                scoreValue += precision
+        }
+    }
+    
+    
+    @IBAction func handleSubmit() {
+        let alert = UIAlertController(title: "some title", message: "your choose \(sliderValue))", preferredStyle: .alert)
+        
         let action = UIAlertAction(title: "some action", style: .cancel) {_ in
-            self.goal.text = "\(Int.random(in: 1...100))"
+            self.countNewScore()
+            self.newRound()
         }
         
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func handleStartNewGame() -> Void {
-        
+    @IBAction func handleStartNewGame() {
+        roundValue = 0
+        scoreValue = 0
+        newRound()
     }
 
+    @IBAction func handleMoveSlider() {
+        sliderValue = lroundf(slider.value)
+    }
 
 }
 
