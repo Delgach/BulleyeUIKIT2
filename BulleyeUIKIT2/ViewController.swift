@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     }
     
     func newRound() {
-        sliderValue = 50
         goalValue = Int.random(in: 1...100)
         roundValue += 1
         slider?.value = Float(sliderValue)
@@ -62,6 +61,7 @@ class ViewController: UIViewController {
         
         let action = UIAlertAction(title: "some action", style: .cancel) {_ in
             self.countNewScore()
+            self.sliderValue = Int.random(in: 1...100)
             self.newRound()
         }
         
