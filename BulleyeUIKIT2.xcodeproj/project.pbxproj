@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1957962D2799D88C001AE171 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1957962C2799D88C001AE171 /* AboutViewController.swift */; };
+		195796302799DA84001AE171 /* Bullseye.html in Resources */ = {isa = PBXBuildFile; fileRef = 1957962F2799DA84001AE171 /* Bullseye.html */; };
 		199CF5B9278DFB6800FD9C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CF5B8278DFB6800FD9C3F /* AppDelegate.swift */; };
 		199CF5BB278DFB6800FD9C3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CF5BA278DFB6800FD9C3F /* SceneDelegate.swift */; };
 		199CF5BD278DFB6800FD9C3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199CF5BC278DFB6800FD9C3F /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1957962C2799D88C001AE171 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		1957962F2799DA84001AE171 /* Bullseye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Bullseye.html; sourceTree = "<group>"; };
 		199CF5B5278DFB6800FD9C3F /* BulleyeUIKIT2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulleyeUIKIT2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199CF5B8278DFB6800FD9C3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199CF5BA278DFB6800FD9C3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,11 +62,13 @@
 			children = (
 				199CF5B8278DFB6800FD9C3F /* AppDelegate.swift */,
 				199CF5BA278DFB6800FD9C3F /* SceneDelegate.swift */,
+				1957962F2799DA84001AE171 /* Bullseye.html */,
 				199CF5BC278DFB6800FD9C3F /* ViewController.swift */,
 				199CF5BE278DFB6800FD9C3F /* Main.storyboard */,
 				199CF5C1278DFB6B00FD9C3F /* Assets.xcassets */,
 				199CF5C3278DFB6B00FD9C3F /* LaunchScreen.storyboard */,
 				199CF5C6278DFB6B00FD9C3F /* Info.plist */,
+				1957962C2799D88C001AE171 /* AboutViewController.swift */,
 			);
 			path = BulleyeUIKIT2;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				199CF5C5278DFB6B00FD9C3F /* LaunchScreen.storyboard in Resources */,
+				195796302799DA84001AE171 /* Bullseye.html in Resources */,
 				199CF5C2278DFB6B00FD9C3F /* Assets.xcassets in Resources */,
 				199CF5C0278DFB6800FD9C3F /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			files = (
 				199CF5BD278DFB6800FD9C3F /* ViewController.swift in Sources */,
 				199CF5B9278DFB6800FD9C3F /* AppDelegate.swift in Sources */,
+				1957962D2799D88C001AE171 /* AboutViewController.swift in Sources */,
 				199CF5BB278DFB6800FD9C3F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

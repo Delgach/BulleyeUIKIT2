@@ -72,6 +72,7 @@ class ViewController: UIViewController {
     @IBAction func handleStartNewGame() {
         roundValue = 0
         scoreValue = 0
+        self.sliderValue = Int.random(in: 1...100)
         newRound()
     }
 
