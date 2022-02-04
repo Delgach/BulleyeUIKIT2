@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  BulleyeUIKIT2
-//
-//  Created by Владимир Дельгадильо on 11.01.2022.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -55,9 +48,17 @@ class ViewController: UIViewController {
         }
     }
     
+    func addNewRecord() {
+        if scoreValue > 0 {
+            var toplist = PersistencyHelper.load()
+            toplist.append(TopItem(name: "unknow", score: scoreValue))
+            PersistencyHelper.save(list: toplist.sorted(by: { $0.score > $1.score }))
+        }
+    }
+    
     
     @IBAction func handleSubmit() {
-        let alert = UIAlertController(title: "some title", message: "your choose \(sliderValue))", preferredStyle: .alert)
+        let alert = UIAlertController(title: "some title", message: "your chosen \(sliderValue)", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "some action", style: .cancel) {_ in
             self.countNewScore()
@@ -70,6 +71,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func handleStartNewGame() {
+        addNewRecord()
         roundValue = 0
         scoreValue = 0
         self.sliderValue = Int.random(in: 1...100)

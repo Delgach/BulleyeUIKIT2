@@ -1,10 +1,3 @@
-//
-//  AboutViewController.swift
-//  BulleyeUIKIT2
-//
-//  Created by Владимир Дельгадильо on 20.01.2022.
-//
-
 import UIKit
 import WebKit
 

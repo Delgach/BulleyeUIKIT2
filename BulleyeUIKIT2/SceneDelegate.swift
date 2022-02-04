@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  BulleyeUIKIT2
-//
-//  Created by Владимир Дельгадильо on 11.01.2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
